@@ -1,0 +1,64 @@
+
+*,
+&::before,
+&::after {
+    box-sizing: border-box;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+body, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a,svg,path{
+    transition: all 0.4s ease-in-out;
+}
+
+
+li {
+    list-style: none;
+}
+
+img {
+    /* max-width: 100%; */
+    /* height: auto; */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+*,
+*:focus-visible {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    /* font-family: $title-family; */
+    font-weight: bold;
+    margin: 0;
+}
+
+.container{
+    margin:  0 auto !important;
+    max-width: 1380px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+
