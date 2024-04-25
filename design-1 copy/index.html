@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/aos/aos-master/dist/aos.css">
+</head>
+
+<body style="background-color: #000;">
+    <nav style="position: fixed; background-color: rgba(0,0,0,0.7); padding: 5px 0; left: 0; right: 0;">
+        <div class="nav__container" style="display: flex; justify-content: space-between;">
+            <div class="logo" style="font-size: 32px; color: #fff; font-style: italic; ">
+                <h2>ACE</h2>
+            </div>
+            <ul style="display: flex; gap: 30px; align-items: center;">
+                <li>
+                    <a href="#Home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#About">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Product">
+                        Product
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <section class="banner"
+        style="display: flex; justify-content: center; align-items: center;  background-image: url('./assets/images/gasket14.jpeg'), url('./assets/images/gasket-banner.webp'), linear-gradient(black, green); background-blend-mode: overlay; height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="heading">
+            <h1 style="color: #fff; font-size: 64px; line-height: 1.2; text-align: center; max-width: 660px;">
+                ACE India Gasket Factory
+            </h1>
+        </div>
+    </section>
+    <section class="why" data-aos="zoom-in-up"
+        style="font-size: 50px; margin: 100px 0; font-style: italic; text-align: center;">
+        <div class="images__container"
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div class="images__image" style="display: grid; grid-template-columns: 1fr;">
+                <img style="border-radius: 50%; width: 322px; height: 322px; position: relative; z-index: 0; "
+                    src="./assets/images/gasket10.jpeg" alt="gasket10">
+                <img style="border-radius: 50%; width: 385px; height: 385px; position: relative; z-index: 1; margin: -140px 0 0 70px;"
+                    src="./assets/images/gasket11.jpeg" alt="gasket11">
+                <img style="border-radius: 50%; width: 230px; height: 230px; position: relative; z-index: 2; margin: -60px 0 0 40px;"
+                    src="./assets/images/gasket12.jpeg" alt="gasket12">
+            </div>
+            <div class="images__content" style="display: flex; flex-direction: column; gap: 30px;">
+                <h2 style="color: #fff; text-align: left;">
+                    why?
+                </h2>
+                <p style="color: #fff; max-width: 360px; text-align: left;">
+                    Non asbestos Gasket is heat resistant and much better than the asbestos ones as they were toxic and
+                    harmful for the health Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit facere
+                    officia nemo? Ullam expedita, nisi aut exercitationem debitis consectetur ducimus dolor cupiditate,
+                    earum excepturi laborum! Ipsam modi optio provident accusamus, esse, doloremque blanditiis iste
+                    minus quae hic veritatis pariatur corporis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section class="parallax">
+            <div class="parallax-content">
+                <h2>Non Asbestos Gasket</h2>
+                <p>The Joining solution to dividing problem</p>
+            </div>
+        </section>
+    </main>
+    <section class="why-not" style=" margin: 20px 0; font-style: italic; text-align: center;">
+        <h2 style="color: #fff; font-size: 50px;">
+            why not asbestos?
+        </h2>
+        <h3 style="color: #fff; font-size: 50px;">
+            why not asbestos?
+        </h3>
+        <!-- ///////////////////////////////////////////////////////////////////////////// -->
+        <!-- z-index red<green<blue -->
+        <!-- <div class="boxes">
+            <div class="box box-red"></div>
+            <div class="box box-green"></div>
+            <div class="box box-blue"></div>
+        </div> -->
+
+        <!-- 
+        idhar z-index blue box ka sabse jyada hai fir green ka fir red ka sabse kam 
+        par kyonki red ke andar blue hai to 
+        isliye blue box green ke piche jayega sabse jyada z-index hone ke bad bhi
+        
+        kyonki red vala div ek tarah se boundary hai blue box ki iss vajah se 
+        vo red box ke upar to ja sakta hai par red vala div uski boundary hai
+        ab vo jis ke niche hai uske upar vo nahi jaa sakta 
+         -->
+        <!-- <div class="boxes">
+            <div class="box box-red">
+                <div class="box box-blue"></div>
+            </div>
+            <div class="box box-green"></div>
+        </div> -->
+
+
+        <!-- transform and opacity<1 also create stacking contexts so whenever having problem of overlying and all just take care of the presence of transform and opacity and many such properties over their in one of the divs\
+        https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context -->
+
+        <!-- ///////////////////////////////////////////////////////////////////////////// -->
+        <!-- <div class="buttons">
+            <div class="button button-one">Yash</div>
+            <div class="button button-one0">Yash</div>
+            <div class="button button-one1">Yash</div>
+            <div class="button button-two">Kothari</div>
+            <div class="button button-two0">Kothari</div>
+            <div class="button button-three">The G</div>
+            <div class="button button-three0">The G</div>
+            <div class="button button-three2">The G</div>
+            <div class="button button-three3">The G</div>
+        </div> -->
+        <!-- ///////////////////////////////////////////////////////////////////////////// -->
+
+        <div class="card" data-aos="zoom-in-up">
+            <div class="card__content">
+
+            </div>
+            <h2 class="card__title">
+                Lorem, ipsum dolor
+            </h2>
+            <p class="card__para">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit
+            </p>
+        </div>
+
+        <!-- <div class="blocks">
+        <div class="block block1"></div>
+        <div class="block block2"></div>
+        <div class="block block3"></div>
+        <div class="block block4"></div>
+        <div class="block block5"></div>
+        <div class="block block6"></div>
+        <div class="block block7"></div>
+       </div> -->
+    </section>
+    <section class="textblock ">
+        <h1 class="textblock__heading" style="color: #fff; text-align: center;">Why chose us?</h1>
+        <div class="textblock__container">
+            <div class="textblock__media --left">
+                <div class="textblock__image --left">
+                    <!-- <img src="./assets/images/gasket13.jpeg" alt=""> -->
+                </div>
+                <div class="textblock__content --right">
+                    <h2 class="textblock__title">we are the best</h2>
+                    <div class="textblock__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+                        deleniti quia unde voluptatum excepturi praesentium perferendis alias exercitationem veritatis
+                        velit aliquid facilis maxime, cumque facere ullam quos, atque accusamus possimus. Ea rerum
+                        velit, nostrum ipsum laudantium assumenda eaque non ut.</div>
+                </div>
+            </div>
+        </div>
+        <div class="textblock__container">
+            <div class="textblock__media --right">
+                <div class="textblock__image --right">
+                    <!-- <img src="./assets/images/gasket11.jpeg" alt=""> -->
+                </div>
+                <div class="textblock__content --left">
+                    <h2 class="textblock__title">we are the best</h2>
+                    <div class="textblock__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+                        deleniti quia unde voluptatum excepturi praesentium perferendis alias exercitationem veritatis
+                        velit aliquid facilis maxime, cumque facere ullam quos, atque accusamus possimus. Ea rerum
+                        velit, nostrum ipsum laudantium assumenda eaque non ut.</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="textblock__container">
+            <div class="textblock__media --left">
+                <div class="textblock__image --left --bottom">
+                    <!-- <img src="./assets/images/gasket10.jpeg" alt=""> -->
+                </div>
+                <div class="textblock__content --right">
+                    <h2 class="textblock__title">we are the best</h2>
+                    <div class="textblock__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+                        deleniti quia unde voluptatum excepturi praesentium perferendis alias exercitationem veritatis
+                        velit aliquid facilis maxime, cumque facere ullam quos, atque accusamus possimus. Ea rerum
+                        velit, nostrum ipsum laudantium assumenda eaque non ut.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="twin" data-aos="zoom-in-up">  
+        <div class="twin__container">
+            <div class="twin__media --left">
+                <img src="./assets/images/Screenshot 2024-02-09 at 8.19.23 PM.png" alt="">
+                <div class="twin__content">
+                    <div class="heading">
+                        Lorem ipsum dolor sit.
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam illo rerum, reprehenderit maiores corporis.
+                    </div>
+                </div>
+            </div>
+            <div class="twin__media --right">
+                <img src="./assets/images/gasket-banner.webp" alt="">
+                <div class="twin__content">
+                    <div class="heading">
+                        Lorem ipsum dolor sit.
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam illo rerum, reprehenderit maiores corporis.
+                    </div>
+                </div>
+            </div>
+            <div class="twin__media --left">
+                <img src="./assets/images/Screenshot 2024-02-09 at 8.19.23 PM.png" alt="">
+                <div class="twin__content">
+                    <div class="heading">
+                        Lorem ipsum dolor sit.
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam illo rerum, reprehenderit maiores corporis.
+                    </div>
+                </div>
+            </div>
+            <div class="twin__media --right">
+                <img src="./assets/images/gasket-banner.webp" alt="">
+                <div class="twin__content">
+                    <div class="heading">
+                        Lorem ipsum dolor sit.
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam illo rerum, reprehenderit maiores corporis.
+                    </div>
+                </div>
+        </div>
+
+    </section>
+
+   
+    <section class="steps">
+
+    </section>
+
+    <footer>
+        <div class="footer__container">
+            <div class="footer__logo">
+                ACE
+            </div>
+            <div class="footer__info">
+                <div class="footer__info-address"></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS -->
+    <script src="./assets/aos/aos-master/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 3000
+        });
+    </script>
+</body>
+
+</html>

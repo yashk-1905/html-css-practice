@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/roboto/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/roboto/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/roboto/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --heading-color: #091133;
+    --text-color: #6F7CB2;
+    --button-bg: #111B47;
+    --card-text: #5D6970;
+    --para: #505F98;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.container,
+[class*="__container"] {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto !important;
+  padding: 0 20px;
+}
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+a,
+.button,
+svg,
+path {
+    transition: all 0.5s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.62;
+}
+h1 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.32;
+    letter-spacing: 1px;
+}
+
+h4,p {
+    font-size: 18px;
+    line-height: 1.66;
+    color: var(--text-color);
+}
+h1,h4{
+    color: var(--heading-color);
+}
+
+.intro {
+    position: relative;
+    margin-bottom: 107px;
+    overflow: hidden;
+    padding-block: 200px 250px;
+}
+
+.content {
+    max-width: 539px;
+}
+
+.intro__heading {
+    margin-bottom: 20px;
+}
+
+.intro__excerpt,.light__excerpt {
+    margin-bottom: 69px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.intro__excerpt p{
+    color: var(--para);
+}
+.intro__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+.intro__image{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 780px;
+}
+.intro::before{
+    content: '';
+    position: absolute;
+    width: 1490px;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/Path.svg');
+    right: -215px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.button {
+    border-radius: 2px;
+    padding: 5px 40px;
+    color: #fff;
+    background-color: var(--button-bg);
+}
+.button:hover{
+    color: #fff;
+    background-color: var(--text-color);
+}
+.button.--secondary{
+    color: var(--heading-color);
+    padding: 3px 52px;
+    background-color: transparent;
+    border: 2px solid var(--heading-color);
+}
+.button.--secondary:hover{
+    color: #fff;
+    background-color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.light {
+    margin-block: 107px 200px;
+}
+.light__image{
+    min-width: 540px;
+    min-height: 524px;
+}
+.light__excerpt p{
+    font-size: 16px;
+}
+.card-title svg{
+    min-width: 36px;
+    min-height: 36px;
+    margin-bottom: 14px;
+}
+.card-title h4{
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+.card-title .card__excerpt{
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--card-text);
+}
+.light__heading{
+    margin-bottom: 16px;
+}
+.light__excerpt{
+    margin-bottom: 80px;
+}
+
+.light__cards{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.light__content{
+    margin-left: 0;
+}
+
+.light__container{
+    display: grid;
+    grid-template-columns: 540px 1fr;
+    gap: 55px;
+    align-items: center;
+}
+@media (max-width:1140px) {
+    .intro__content {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .light__container{
+        grid-template-columns: 1fr;
+    }
+    h1{
+        font-size: 36px;
+    }
+}
+@media (max-width:768px) {
+    .intro{
+        margin-bottom: 50px;
+    }
+    .light{
+        margin-block: 30px;
+    }
+        h4,p{
+            font-size: 16px;
+            line-height: 1.5;
+    }
+    .light__cards{
+        flex-wrap: wrap;
+    }
+    .content{
+        margin-right: 20px;
+    }
+    .intro__excerpt,.light__excerpt{
+        margin-bottom: 30px;
+    }
+}
