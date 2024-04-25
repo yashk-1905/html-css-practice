@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <!-- 
+        HAR BUTTON KA ONCLICK DIFFERENT SCOPE LETA HAI TO VARIABLE SAME NAAM SE DECLARE NAHI KAR SAKTE
+        PAR DEFINE TO KARNE HI PADENGE 
+        JAISE IDHAR random OR computerChoice use hua hai idhar 
+     -->
+    <section class="game">
+        <div class="game__container">
+            <h1 class="game__heading">
+                Welcome to the game of chance
+            </h1>
+            <!-- Math.random() -- generates random between 0 and 1 
+                if multiplied by 3 it will give me number between 0 and 3
+            -->
+            <div class="button__group">
+                <button 
+                onclick="
+                    console.log('you have chosen stone');
+                    let random = Math.random()*3;
+                    let computerChoice = '';
+                    console.log(random)
+                    if(random<=1){
+                        computerChoice= 'stone'
+                        // console.log('computer has also chosen stone, draw')
+                    }else if(random>1 && random<=2){
+                        // console.log('computer has chosen paper, defeat')
+                        computerChoice='paper';
+                    }else{
+                        // console.log('computer has chosen scissor, CONGRATS you win')
+                        computerChoice='scissor'
+                    }
+                    
+                    if(computerChoice=='stone'){
+                        console.log('computer has also chosen stone, draw')
+                    }else if(computerChoice=='paper'){
+                        console.log('computer has chosen paper, defeat')
+                    }else{
+                        console.log('computer has chosen scissor, CONGRATS you win')
+                    }
+
+
+                    // if(random<=1){
+                    //     console.log('computer has also chosen stone, draw')
+                    // }else if(random>1 && random<=2){
+                    //     console.log('computer has chosen paper, defeat')
+                    // }else{
+                    //     console.log('computer has chosen scissor, CONGRATS you win')
+                    // }
+                " class="button stone">stone</button>
+                <button
+                onclick="
+                    console.log('you have chosen paper');
+                    // let random = Math.random()*3;
+                    random= Math.random()*3;
+                    computerChoice = '';
+
+                    console.log(random)
+                    if(random<=1){
+                        computerChoice= 'stone'
+                        // console.log('computer has also chosen stone, draw')
+                    }else if(random>1 && random<=2){
+                        // console.log('computer has chosen paper, defeat')
+                        computerChoice='paper';
+                    }else{
+                        // console.log('computer has chosen scissor, CONGRATS you win')
+                        computerChoice='scissor'
+                    }
+
+                    
+                    if(computerChoice=='stone'){
+                        console.log('computer has also chosen stone, CONGRATS you win')
+                    }else if(computerChoice=='paper'){
+                        console.log('computer has chosen paper, draw')
+                    }else{
+                        console.log('computer has chosen scissor, defeat')
+                    }
+                "  class="button paper">paper</button>
+                <button 
+                onclick="
+                    console.log('you have chosen scissor');
+                    random= Math.random()*3;
+                    computerChoice = '';
+
+                    console.log(random)
+                    if(random<=1){
+                        computerChoice= 'stone'
+                        // console.log('computer has also chosen stone, draw')
+                    }else if(random>1 && random<=2){
+                        // console.log('computer has chosen paper, defeat')
+                        computerChoice='paper';
+                    }else{
+                        // console.log('computer has chosen scissor, CONGRATS you win')
+                        computerChoice='scissor'
+                    }
+
+                    if(computerChoice=='stone'){
+                        console.log('computer has also chosen stone, defeat')
+                    }else if(computerChoice=='paper'){
+                        console.log('computer has chosen paper, CONGRATS you win')
+                    }else{
+                        console.log('computer has chosen scissor, draw')
+                    }
+                " class="button scissor">scissor</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

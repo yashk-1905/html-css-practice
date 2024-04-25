@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 20px 40px;
+            border: none;
+            background-color: blue;
+            color: #fff;
+            border-radius: 28px;
+        }
+        input{
+            width: 400px;
+            border-radius: 28px;
+            height: 70px;
+            font-size: 55px;
+            text-align: center;
+            background-color: rgba(255,0,0, 0.1);
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <h1 style="color: red;"> get discount based on age and gender</h1> <br> <br>
+    <button onclick= print()>wanna know acc to already declared age and gender?</button> <br> <br>
+    
+    <script>
+        let age = 67;
+        let gender = 'female';
+        let discount = 0;
+        // age<5 ? discount= 100 : age>5 && gender=='fenale'? discount= 50 : age>65 ? discount= 70: age>65 && gender=='female'? discount=100: discount = 0;
+            if(age<5 && gender=='female'){ 
+                discount = 150;
+            } else if(age<5){
+                discount = 100;
+            }else if(age>=5 && age<=65 && gender=='female'){
+                discount = 50;
+            } 
+             else if(age>65 && gender=='female'){
+                discount = 120;
+            } else if(age>65){
+                discount = 70;
+            } else{
+                discount = 0
+            }
+            function print(){
+            alert(`discount is ${discount}%`);
+        }
+    </script>
+</body>
+</html>

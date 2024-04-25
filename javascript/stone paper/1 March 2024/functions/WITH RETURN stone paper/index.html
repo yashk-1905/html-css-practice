@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets/style.css">
+    </head>
+    <body>
+        <section class="game">
+            <div class="game__container">
+                <h1 class="game__heading">
+                    Welcome to the game of chance
+                </h1>
+                <div class="button__group">
+                    <button onclick="
+                        /**
+                         * ??
+                         * AB RETURN KA USE HOGA 
+                         * 
+                         * return function ko immidiately end kar deta hai
+                        */
+
+                        /**
+                         * ??
+                         * ANALOGY
+                         * 
+                         * suppose ki tum function ho 
+                         * to tumhari mammi tumko bolegi jaao gas band karo 
+                         * to yahan tak to tumne normal jaakar apna kaam kar diya yani tumne kuch return nahi kiya 
+                         * 
+                         * par ab tumhari mammi tumko bolegi ki jao 
+                         * pani ka glass lekar aao 
+                         * yani tum function ho or tum gaye pani ka glass lekar aaye (yani tumne return kiya kuch)
+                         * ab immidiately glass dene ke baadd tum sofe par pad gaye (yani return karte hi tum{function} khatam)
+                        */
+
+                        /**
+                         * ??*
+                         * 
+                         * CHALIYE ISKE KUCH EXAMPLES PEHLE DEKH LETE HAIN
+                         * iss button ke niche diye gaye link par jayen
+                        */
+
+                        urChoice = 'stone'
+                        generate();
+                        checkStone();
+                    
+                    " class="button stone">stone</button>
+                    <a href="./exampleReturn/index.html"></a>
+                    <button onclick="
+                        
+                        urChoice = 'paper';
+                        generate();
+                        checkPaper()
+
+                    " class="button paper">paper</button>
+                    <button onclick="
+                    
+                        urChoice = 'scissor'
+                        generate();
+                        checkScissor();
+                    
+                    " class="button scissor">scissor</button>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            let computerChoice = '';
+            function generate() {
+                let random = Math.random() * 3;
+                if (random <= 1) {
+                    computerChoice = 'stone'
+                } else if (random > 1 && random <= 2) {
+                    computerChoice = 'paper';
+                } else {
+                    computerChoice = 'scissor'
+                }
+                // return computerChoice;
+            }
+
+            let message = '';
+            function checkStone() {
+                
+                if (computerChoice == 'stone') {
+                    message = alert(`Your choice is '${urChoice}' and since the  computer has chosen '${computerChoice}', so darling it's a draw`)
+
+                } else if (computerChoice == 'paper') {
+                    message = alert(`Your choice is '${urChoice}' and since the computer has chosen '${computerChoice}', so darling u've lost`)
+                } else {
+                    message = alert(`Your choice is '${urChoice}' and since the computer has chosen '${computerChoice}', so darling CONGRATS u've WON`)
+                }
+                // return message;
+            }
+            function checkPaper() {
+                if (computerChoice == 'stone') {
+                    message = alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', so darling CONGRATS u've WON ${random}`)
+                } else if (computerChoice == 'paper') {
+                    message = alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', so darling it's a draw `)
+                } else {
+                    message = alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', sorry darling u've lost `)
+                }
+                // return message;
+            }
+            function checkScissor() {
+                if (computerChoice == 'stone') {
+                    message = alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', sorry darling u've lost `)
+                } else if (computerChoice == 'paper') {
+                    message = alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', darling CONGRATS u've WON `)
+                } else {
+                    message = alert(`Your choice is '${urChoice}', computer has also chosen '${computerChoice}', so it's a draw darling `)
+                }
+                // return message;
+            }
+        </script>
+    </body>
+</html>

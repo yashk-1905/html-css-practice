@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <section class="game">
+        <div class="game__container">
+            <h1 class="game__heading">
+                Welcome to the game of chance
+            </h1>
+            <div class="button__group">
+                <button 
+                onclick="
+                let urChoice = 'stone'
+                    // console.log('you have chosen stone');
+                    let random = Math.random()*3;
+                    let computerChoice = '';
+                    //  console.log(random);
+                    if(random<=1){
+                        computerChoice= 'stone'
+                    }else if(random>1 && random<=2){
+                        computerChoice='paper';
+                    }else{
+                        computerChoice='scissor'
+                    }
+                
+                    if(computerChoice=='stone'){
+                        // console.log('computer has also chosen stone, draw')
+                        alert(`Your choice is '${urChoice}' and since the random number  '${random}' is < 1 so computer has chosen '${computerChoice}', so darling it's a draw `)
+                    }else if(computerChoice=='paper'){
+                        // console.log('computer has chosen paper, defeat')
+                        alert(`Your choice is '${urChoice}' and since the random number  '${random}' is b/w 1 and 2 so computer has chosen '${computerChoice}', so darling u've lost `)
+                    }else{
+                        // console.log('computer has chosen scissor, CONGRATS you win')
+                        alert(`Your choice is '${urChoice}' and since the random number  '${random}' is >2 so computer has chosen '${computerChoice}', so darling CONGRATS u've WON `)
+                    }
+                " class="button stone">stone</button>
+                <button
+                onclick="
+                    urChoice = 'paper'
+                    // console.log('you have chosen paper');
+                    random= Math.random()*3;
+                    computerChoice = '';
+
+                    // console.log(random);
+                    if(random<=1){
+                        computerChoice= 'stone'
+                    }else if(random>1 && random<=2){
+                        computerChoice='paper';
+                    }else{
+                        computerChoice='scissor'
+                    }
+
+                    
+                    if(computerChoice=='stone'){
+                        // console.log('computer has also chosen stone, CONGRATS you win')
+                        alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', so darling CONGRATS u've WON `)
+                    }else if(computerChoice=='paper'){
+                        // console.log('computer has chosen paper, draw')
+                        alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', so darling it's a draw `)
+                    }else{
+                        // console.log('computer has chosen scissor, defeat')
+                        alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', sorry darling u've lost `)
+                    }
+                "  class="button paper">paper</button>
+                <button 
+                onclick="
+                    urChoice = 'scissor'
+                    random= Math.random()*3;
+                    computerChoice = '';
+
+                    console.log(random);
+                    if(random<=1){
+                        computerChoice= 'stone'
+                    }else if(random>1 && random<=2){
+                        computerChoice='paper';
+                    }else{
+                        computerChoice='scissor'
+                    }
+
+                    if(computerChoice=='stone'){
+                        // console.log('computer has also chosen stone, defeat')
+                        alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', sorry darling u've lost `)
+                    }else if(computerChoice=='paper'){
+                        // console.log('computer has chosen paper, CONGRATS you win')
+                        alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', darling CONGRATS u've WON `)
+                    }else{
+                        // console.log('computer has chosen scissor, draw')
+                        alert(`Your choice is '${urChoice}', computer has also chosen '${computerChoice}', so it's a draw darling `)
+                    }
+                " class="button scissor">scissor</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 20px 40px;
+            border: none;
+            background-color: blue;
+            color: #fff;
+            border-radius: 28px;
+        }
+        input{
+            width: 400px;
+            border-radius: 28px;
+            height: 70px;
+            font-size: 55px;
+            text-align: center;
+            background-color: rgba(255,0,0, 0.1);
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <h1 style="color: red;"> an adult or a kid</h1> <br> <br>
+    <button onclick= print()>wanna know acc to already declared age?</button> <br> <br>
+    <input type="text" class="age" oninput=getval()> <br><br>
+    <button onclick= print2()>wanna know acc to the age u've entered?</button><br><br>
+    <!-- GUARD OPERATOR 
+        AGAR AGE DI HI NAHI USER NE INPUT ME 
+        TO BETTER HOGA  || guard operator use ho
+        age || 7;
+        KARKE DE DI JAYE JISS SE KI USS CASE ME AGE 7 CONSIDER KAR LI JAYE
+
+        to ab age
+        0
+        null
+        false
+        undefined 
+        NAN 
+        hui to uski jagah 7 lenge
+    -->
+    <input type="text" class="guard" oninput=getval2()><br><br>
+    <button onclick=print3()>guard operator application</button>
+    
+    <!--DEFAULT OPERATOR
+        AB GUARD OPERATOR ME SABHI FALSY VALUES KO FALSE MANA JATA HAI OR || KE BAAD KI VALUE KO LIYA JATA HAI
+        PAR BAHUT JAGAH 0 OR false EK VALUE HO SAKTI HAI TO BETTER HOGA DEFAULT OPERATOR (??) USE KARNA 
+        KYONKI
+        DEFAULT OPERATOR SIRF NULL OR UNDEFINED KO HI FALSE MAANTA HAI BAKI KO NAHI 
+        age ?? 7;
+
+        to ab 
+
+        age agar
+        - null 
+        - undefined hogi
+        keval tab hi hum 7 lenge value age ki 
+        
+     -->
+    
+    <script>
+        let age = 1;
+        age>18?('adult'): console.log('kid');
+        
+        let age1= 21;
+        // let age2 = document.querySelector('.age').value;
+        let result1='';
+
+        age1>18 ? result1='adult': result1='kid';
+        let article1 = '';
+        result1=='adult' ? article1='an': article1='a';
+        function print(){
+            alert(`age is '${age1}' so the girl is ${article1} '${result1}'`);
+        }
+
+
+
+        let age2= '';
+        let result='';
+        let article = '';
+        function getval(){
+            age2 = document.querySelector('.age').value;
+            age2 >= 18 ? result='adult': result='kid';
+            result=='adult' ? article='an': article='a';
+        }
+        
+        function print2(){
+            alert(`age is '${age2}' so the girl is ${article} '${result}'`);
+        }
+        
+        
+        let age3 = 0;
+        let result3= '';
+        let article3 = '';
+        function getval2(){
+            age3 = document.querySelector('.guard').value || 7;
+            age3 >= 18 ? result3='adult': result3='kid';
+            result3=='adult' ? article3='an': article3='a';
+        }
+        
+        function print3(){
+            alert(`age is '${age3}' so the girl is ${article3} '${result3}'`);
+        }
+    </script>
+</body>
+</html>

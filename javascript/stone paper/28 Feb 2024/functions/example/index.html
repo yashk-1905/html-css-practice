@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = 21;
+        console.log(`Your age is ${age}`);
+
+        age = 22;
+        console.log(`Your age is ${age}`);
+
+        age = 23;
+        console.log(`Your age is ${age}`);
+
+
+        /*
+        NOW rather than writing the console again we
+         can put this console in  a function that
+         we can run rather than writing the console repeatedly
+        */
+
+        let age2 = 13;
+        function print(){
+            console.log(`Your age is ${age2}`);
+        }
+        print();
+
+        age2 = 14;
+        print();
+
+        age2 = 15;
+        print();
+
+        /*
+            in a normal program without using any if-else or function we had to go sequentially 
+
+            with if else we can jump/skip over parts
+
+            the power we have with functions is we can jump from anywhere to anywhere within our code from line10 to line1 to line41 thus no limitation
+        */
+    </script>
+</body>
+</html>

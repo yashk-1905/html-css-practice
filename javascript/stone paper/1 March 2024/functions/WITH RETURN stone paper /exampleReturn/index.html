@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Example 1
+        function generateUsingReturn(){
+            let random = Math.random();
+            let ourMove = random*3
+            return ourMove;
+        }
+        console.log(generateUsingReturn());
+        console.log(generateUsingReturn());
+        console.log(generateUsingReturn());
+        console.log(generateUsingReturn());
+        /**
+         * ??
+         * to yahan par jo hai 0 se 3 ke bich ka random number generate ho jayega 
+         */
+        
+        // Example 2
+        let age = 14;
+        function driveStatus(){
+            let status = '';
+            if(age>=18){
+                status = `janab aapki age to ${age} hai oh yes you can drive ji`;
+            } else {
+                status = `age to abhi ji aapki ${age} hi hai to Sorry beta ji abhi aap chote ho`;
+            }
+            return status;
+        }
+        console.log(driveStatus());
+
+        age = 27
+        console.log(driveStatus());
+
+
+        // Example 3
+        /**
+         * ??*
+         * to iss example me hum dekhenge ki 
+         * 
+         * koi boundation nahi hai 
+         * jahan se chaho vahin se return kara do
+        */
+        let age2 = 15;
+
+        /*
+        ??
+        iss case me to age ji undefined hai are aapne define hi nahi ki
+        */
+        // let age2;  
+        
+        function driveStatus2(){
+            let status = '';
+            if (age2===undefined){
+                return 'Aap insaan nahi avtaar ho aapki to age hi undefined hai hamare database me hi nahi aa pa rahi'
+            }
+            if(age2>=18 && age2<110){
+                status = `janab aapki age to ${age2} hai oh yes you can drive ji`;
+                return status; 
+                /**
+                 * are bhaiya yahin return kardo yaar or function end karo aakhir tak jana hi kyon?
+                */
+            } else if(age >= 110){
+                status = `are sir sir aap to ${age} saal ke ho matlab ab aap drive mat karo yaar hum khud aapko chor kar aayenge`
+                return status;
+            }  else {
+                status = `age to abhi ji aapki ${age2} hi hai to Sorry beta ji abhi aap chote ho`;
+                return status;
+            }
+            return status;
+        }
+        console.log(driveStatus2());
+
+        age2 = 32
+        console.log(driveStatus2());
+
+        age2 = undefined;
+        console.log(driveStatus2());
+
+        age2 = 125;
+        console.log(driveStatus2());
+        
+    </script>
+</body>
+</html>

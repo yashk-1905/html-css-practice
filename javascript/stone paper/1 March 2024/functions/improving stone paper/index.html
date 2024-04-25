@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets/style.css">
+    </head>
+    <body>
+        <section class="game">
+            <div class="game__container">
+                <h1 class="game__heading">
+                    Welcome to the game of chance
+                </h1>
+                <div class="button__group">
+                    <button onclick="
+                        // urChoice kyonki video me direct hi likh diya to usne nahi use kiya 
+                        //  par hum isko lagayenge kyonki humne isko use kiya hai 
+                        urChoice = 'stone'
+                        generate();
+                        /**
+                         * ??
+                         * generate me return pehli baar me nahi lagaya vo bina return ke bhi value de 
+                         * raha tha 
+                         * 
+                         * or humne same jab kiya tab bhi koi issue nahi aaya 
+                         */
+                        /** ?? 
+                         * par humne random lagane ki jo koshish ki vo to bekar hi hui bina return ke bhi
+                         * or error ye aaya ki checkStone() function ke baad defined nahi hai random 
+                        */
+
+                        checkStone();
+                    
+                    " class="button stone">stone</button>
+                    <button onclick="
+                        
+                        urChoice = 'paper';
+                        generate();
+                        checkPaper()
+
+                    " class="button paper">paper</button>
+                    <button onclick="
+                    
+                        urChoice = 'scissor'
+                        generate();
+                        checkScissor();
+                    
+                    " class="button scissor">scissor</button>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            let computerChoice = '';
+            function generate() {
+                let random = Math.random() * 3;
+                if (random <= 1) {
+                    computerChoice = 'stone'
+                } else if (random > 1 && random <= 2) {
+                    computerChoice = 'paper';
+                } else {
+                    computerChoice = 'scissor'
+                }
+                // return computerChoice;
+            }
+
+            let message = '';
+            function checkStone() {
+                
+                if (computerChoice == 'stone') {
+                    message = alert(`Your choice is '${urChoice}' and since the  computer has chosen '${computerChoice}', so darling it's a draw`)
+
+                } else if (computerChoice == 'paper') {
+                    message = alert(`Your choice is '${urChoice}' and since the computer has chosen '${computerChoice}', so darling u've lost`)
+                } else {
+                    message = alert(`Your choice is '${urChoice}' and since the computer has chosen '${computerChoice}', so darling CONGRATS u've WON`)
+                }
+                // return message;
+            }
+            function checkPaper() {
+                if (computerChoice == 'stone') {
+                    message = alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', so darling CONGRATS u've WON ${random}`)
+                } else if (computerChoice == 'paper') {
+                    message = alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', so darling it's a draw `)
+                } else {
+                    message = alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', sorry darling u've lost `)
+                }
+                // return message;
+            }
+            function checkScissor() {
+                if (computerChoice == 'stone') {
+                    message = alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', sorry darling u've lost `)
+                } else if (computerChoice == 'paper') {
+                    message = alert(`Your choice is '${urChoice}', computer has chosen '${computerChoice}', darling CONGRATS u've WON `)
+                } else {
+                    message = alert(`Your choice is '${urChoice}', computer has also chosen '${computerChoice}', so it's a draw darling `)
+                }
+                // return message;
+            }
+        </script>
+    </body>
+</html>

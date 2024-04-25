@@ -1,0 +1,92 @@
+*,
+&::before,
+&::after {
+    box-sizing: border-box;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+body, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a,svg,path{
+    transition: all 0.4s ease-in-out;
+}
+
+
+li {
+    list-style: none;
+}
+
+img {
+    /* max-width: 100%; */
+    /* height: auto; */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+*,
+*:focus-visible {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    /* font-family: $title-family; */
+    font-weight: bold;
+    margin: 0;
+}
+
+.container,
+[class*="__container"] {
+    max-width: 1380px;
+    width: 100%;
+    margin: 0 auto !important;
+    padding: 0 20px;
+}
+
+.game__heading{
+    color: rgb(12, 91, 6);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 80px;
+}
+
+.button__group{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.button__group .button{
+    background: red;
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px 40px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    border: 1px solid transparent;   
+}
+
+.button__group .button:hover{
+    color: red;
+    background-color: transparent;
+    border: 1px solid red;
+}
